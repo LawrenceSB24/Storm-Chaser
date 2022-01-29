@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- Links to Bootstrap and JQUERY libraires -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- CSS file link -->
+    <link rel="stylesheet" href="./Develop/style.css">
+
+    <title>Welcome to Weather Dashboard!</title>
 </head>
+
 <body>
+
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main>
+        <aside class="local">
+            <div class="search-local">
+                <h2>Search for city:</h2>
+                <form action="type"><input type="text"></form>
+                <button class="search">search</button>
+            </div>
     
+            <hr class="solid">
+    
+            <div class="saved-locals">
+                <ul>
+                    <li><button>Location 1</button></li>
+                    <li><button>Location 2</button></li>
+                    <li><button>Location 3</button></li>
+                    <li><button>Location 4</button></li>
+                    <li><button>Location 5</button></li>
+                    <li><button>Location 6</button></li>
+                </ul>
+            </div>
+        </aside>
+
+
+        <div class="wx-conditions">
+            <div class="current-wx">
+                <h2>Location: <img src="" alt="wx-cond icon"></h2>
+                <h3>Temperature: </h3>
+                <h3>Wind: </h3>
+                <h3>Humidity: </h3>
+                <h3>Conditions: </h3>
+                <h3>UV-Index: </h3>
+            </div>
+
+            <h2>5-Day Forecast</h2>
+            <div class="day-one-wx">
+                <h3>Date: </h3>
+                <img src="" alt="wx-icon">
+                <h4>Temperature: </h4>
+                <h4>Humidity: </h4>
+                <h4> Wind: </h4>
+                <h4>Conditions: </h4>
+            </div>
+
+            <div class="day-two-wx">
+                <h3>Date: </h3>
+                <img src="" alt="wx-icon">
+                <h4>Temperature: </h4>
+                <h4>Humidity: </h4>
+                <h4> Wind: </h4>
+                <h4>Conditions: </h4>
+            </div>
+
+            <div class="day-three-wx">
+                <h3>Date: </h3>
+                <img src="" alt="wx-icon">
+                <h4>Temperature: </h4>
+                <h4>Humidity: </h4>
+                <h4> Wind: </h4>
+                <h4>Conditions: </h4>
+            </div>
+
+            <div class="day-four-wx">
+                <h3>Date: </h3>
+                <img src="" alt="wx-icon">
+                <h4>Temperature: </h4>
+                <h4>Humidity: </h4>
+                <h4> Wind: </h4>
+                <h4>Conditions: </h4>
+            </div>
+
+            <div class="day-five-wx">
+                <h3>Date: </h3>
+                <img src="" alt="wx-icon">
+                <h4>Temperature: </h4>
+                <h4>Humidity: </h4>
+                <h4> Wind: </h4>
+                <h4>Conditions: </h4>
+            </div>
+            
+        </div>
+        
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./Develop/script.js"></script>
 </body>
+
 </html>
