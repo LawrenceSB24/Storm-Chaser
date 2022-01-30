@@ -1,41 +1,61 @@
+/* CSS file that contains the styling for dahsboard */
+
+/* root element for declaring global variables */
 :root {
     --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --box: 5px solid rgb(248, 246, 246);
     --radius: 12px 0px 12px 0px;
 }
 
-* {
-    margin: 0;
-    padding: auto;
-}
-
+/* Body style section */
 body {
     background-color: rgb(201, 201, 201);
     font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
 }
 
-header {
-    border: midnightblue;
+/* Jumbotron style and format section. Contains linear gradient for background */
+.jumbotron {
     color: mintcream;
-    background-color: midnightblue;
+    background-image: linear-gradient(to left,rgb(4, 4, 141) ,rgb(94, 61, 240));
     text-align: center;
+    font-weight: bolder;
+    width: 100%;
+    overflow: hidden;
 }
 
+/* Saved info format section */
+.saved-info {
+    width: max-content;
+    float: left;
+    justify-content: left;
+}
+
+/* locations style and formating */
+.location {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    width: 300%;
+}
+
+/* Seach section styling and formating */
 .search-local {
     border: var(--box);
     font-size: 30px;
-    background-color: rgb(104, 104, 104);
+    text-align: center;
+    background-image: linear-gradient(
+        rgb(104, 104, 104) 10%,
+        rgb(150, 150, 150) 90% 
+    );
     width: max-content;
     margin-top: 30px;
-    margin-left: 10px;
+    margin-left: 35px;
     padding: 10px;
 }
 
-.search-local .search {
-    justify-content: center;
-    margin-left: 40%;
-}
-
+/* Styling and formating for all buttons in the dashboard */
 button {
     font-size: 20px;
     font-family: serif;
@@ -44,18 +64,31 @@ button {
     margin-top: 20px;
 }
 
-
-hr {
-    margin-top: 20px;
-    width: 25%;
-    height: 5px;
-    margin-left: 10px;
-    background-color: rgb(24, 23, 23);
+/* Formatting for the weather condition cards */
+.wx-conditions{
+    float: none;
+    margin-left: 30%;
 }
 
+/* Formating for the current weather card */
+.current-wx {
+    width: 50%;
+}
 
+/* formating for the 5-day weather cards */
+.future-wx{
+    display: grid;
+    width: 100%;
+}
 
-.current-wx,
+/* Formating for the 5-day weather title */
+.title {
+    width: max-content;
+}
+
+/* Styling and formating for the weather cards */
+.nowcast,
+.title,
 .day-one-wx,
 .day-two-wx,
 .day-three-wx,
@@ -64,11 +97,16 @@ hr {
     border: 10px solid rgb(83, 83, 247);
     margin-top: 20px;
     padding: 10px;
-    width: max-content;
-    background-color: navy;
+    background-image: linear-gradient(
+        navy 30%,
+        rgb(40, 40, 170) 70%
+    );
     color: oldlace;
+    font-size: 18px;
+    font-weight: bold;
 }
 
+/* Prevents locations for having bullet points when saved */
 ul {
     list-style: none;
 }
