@@ -8,8 +8,7 @@
 
     <!-- Links to Bootstrap and JQUERY libraires -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <!-- CSS file link -->
     <link rel="stylesheet" href="./Develop/style.css">
 
@@ -17,98 +16,138 @@
 </head>
 
 <body>
-
-    <header>
-        <h1>Weather Dashboard</h1>
+    <!-- Jumbotron styling for dashboard -->
+    <header class="jumbotron">
+        <h1 class="display-4">Weather Dashboard</h1>
     </header>
 
     <main>
-        <aside class="local">
-            <div class="search-local">
-                <h2>Search for city:</h2>
-                <form action="type"><input type="text"></form>
-                <button class="search">search</button>
-            </div>
-    
-            <hr class="solid">
-    
-            <div class="saved-locals">
-                <ul>
-                    <li><button>Location 1</button></li>
-                    <li><button>Location 2</button></li>
-                    <li><button>Location 3</button></li>
-                    <li><button>Location 4</button></li>
-                    <li><button>Location 5</button></li>
-                    <li><button>Location 6</button></li>
-                </ul>
-            </div>
-        </aside>
-
-
-        <div class="wx-conditions">
-            <div class="current-wx">
-                <h2>Location: <img src="" alt="wx-cond icon"></h2>
-                <h3>Temperature: </h3>
-                <h3>Wind: </h3>
-                <h3>Humidity: </h3>
-                <h3>Conditions: </h3>
-                <h3>UV-Index: </h3>
+        <!-- Section for search and saved location -->
+        <div class="container saved-info">
+            <div class="row">
+                <div class="card search-local">
+                    <h2>Search for city:</h2>
+                    <form action="type"><input type="text"></form>
+                    <button class="search">search</button>
+                </div>
             </div>
 
-            <h2>5-Day Forecast</h2>
-            <div class="day-one-wx">
-                <h3>Date: </h3>
-                <img src="" alt="wx-icon">
-                <h4>Temperature: </h4>
-                <h4>Humidity: </h4>
-                <h4> Wind: </h4>
-                <h4>Conditions: </h4>
+            <!-- Card that contains the save locations. Blank list for now as locations will be appened on by the user -->
+            <div class="row">
+                <div class="card-deck">
+                    <div class="saved-locals">
+                        <ul class="location">
+
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div class="day-two-wx">
-                <h3>Date: </h3>
-                <img src="" alt="wx-icon">
-                <h4>Temperature: </h4>
-                <h4>Humidity: </h4>
-                <h4> Wind: </h4>
-                <h4>Conditions: </h4>
-            </div>
-
-            <div class="day-three-wx">
-                <h3>Date: </h3>
-                <img src="" alt="wx-icon">
-                <h4>Temperature: </h4>
-                <h4>Humidity: </h4>
-                <h4> Wind: </h4>
-                <h4>Conditions: </h4>
-            </div>
-
-            <div class="day-four-wx">
-                <h3>Date: </h3>
-                <img src="" alt="wx-icon">
-                <h4>Temperature: </h4>
-                <h4>Humidity: </h4>
-                <h4> Wind: </h4>
-                <h4>Conditions: </h4>
-            </div>
-
-            <div class="day-five-wx">
-                <h3>Date: </h3>
-                <img src="" alt="wx-icon">
-                <h4>Temperature: </h4>
-                <h4>Humidity: </h4>
-                <h4> Wind: </h4>
-                <h4>Conditions: </h4>
-            </div>
-            
         </div>
-        
+
+        <!-- Container for weather conditions -->
+        <div class="container wx-conditions">
+            <div class="row">
+
+                <!-- Card for current weather conditions in any region -->
+                <div class="card-deck current-wx">
+                    <div class="card nowcast">
+                        <div class="card-title"><h3>City: </h3></div>
+                        <img src="" alt="">
+                        <div class="card-body">
+                            <p>Temp: </p> <!-- Given temperature -->
+                            <p>Wind: </p> <!-- Wind speed-->
+                            <p>Humidity: </p> <!-- Humdity -->
+                            <p>UV-Index: </p> <!-- Severity of UV Index -->
+                            <p>Conditions: </p> <!-- Small summary of weather conditions -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card deck for weather conditions over the next 5 days in chosen location -->
+            <div class="card-deck future-wx">
+                <div class="title"><h2>5-Day Forecast</h2></div>
+                <div class="row">
+
+                    <!-- Day 1 weather conditions -->
+                    <div class="card day-one-wx">
+                        <div class="card-title"><h3>Day 1: </h3></div>
+                        <img src="" alt="">
+                        <div class="card-body">
+                            <p>Temp: </p> <!-- Given temperature -->
+                            <p>Wind: </p> <!-- Wind speed-->
+                            <p>Humidity: </p> <!-- Humdity -->
+                            <p>Conditions: </p> <!-- Small summary of weather conditions -->
+                        </div>
+                    </div>
+    
+                    <!-- Day two weather conditions -->
+                    <div class="card day-two-wx">
+                        <div class="card-title"><h3>Day 2: </h3></div>
+                        <img src="" alt="">
+                        <div class="card-body">
+                            <p>Temp: </p> <!-- Given temperature -->
+                            <p>Wind: </p> <!-- Wind speed-->
+                            <p>Humidity: </p> <!-- Humdity -->
+                            <p>Conditions: </p> <!-- Small summary of weather conditions -->
+                        </div>
+                    </div>
+    
+                    <!-- Day 3 weather conditions -->
+                    <div class="card day-three-wx">
+                        <div class="card-title"><h3>Day 3: </h3></div>
+                        <img src="" alt="">
+                        <div class="card-body">
+                            <p>Temp: </p> <!-- Given temperature -->
+                            <p>Wind: </p> <!-- Wind speed-->
+                            <p>Humidity: </p> <!-- Humdity -->
+                            <p>Conditions: </p> <!-- Small summary of weather conditions -->
+                        </div>
+                    </div>
+    
+                    <!-- Day 4 weather conditions -->
+                    <div class="card day-four-wx">
+                        <div class="card-title"><h3>Day 4: </h3></div>
+                        <img src="" alt="">
+                        <div class="card-body">
+                            <p>Temp: </p> <!-- Given temperature -->
+                            <p>Wind: </p> <!-- Wind speed-->
+                            <p>Humidity: </p> <!-- Humdity -->
+                            <p>Conditions: </p> <!-- Small summary of weather conditions -->
+                        </div>
+                    </div>
+    
+                    <!-- Day 5 weather conditions -->
+                    <div class="card day-five-wx">
+                        <div class="card-title"><h3>Day 5: </h3></div>
+                        <img src="" alt="">
+                        <div class="card-body">
+                            <p>Temp: </p> <!-- Given temperature -->
+                            <p>Wind: </p> <!-- Wind speed-->
+                            <p>Humidity: </p> <!-- Humdity -->
+                            <p>Conditions: </p> <!-- Small summary of weather conditions -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notes: -->
+        <!-- Each weather condition will be updated dynamically in the chosen region via fetching info from Open Weather One Call api using script.js -->
+        <!-- Dynamic date and time will be located in the jumbotron -->
+        <!-- Saved locations will be appended beneath the search section and stored using local storage -->
+        <!-- Conditions will be added to the forecasts so users can read about the type of weather occuring in the region in a brief summary-->
+        <!-- Once api fetching js is set, all elements aside from the search section will be hidden until user selects a location for weather info -->
     </main>
 
+    <!-- Links to jquery, popper, jquery ui, and moment.js files. Moment.js is here in case date and time need to be feature in dashboard -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <!-- Link to script.js file -->
     <script src="./Develop/script.js"></script>
 </body>
 
