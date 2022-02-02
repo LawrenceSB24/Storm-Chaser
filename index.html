@@ -23,11 +23,11 @@
 
     <main>
         <!-- Section for search and saved location -->
-        <div class="container saved-info">
+        <div class="container content-left saved-info">
             <div class="row">
                 <div class="card search-local">
                     <h2>Search for city:</h2>
-                    <form action="type"><input type="text"></form>
+                    <input id="selected-city" class="form-control" type="text" placeholder="Enter city" aria-label="Enter city"></input>
                     <button class="search" id="fetch-btn">search</button>
                 </div>
             </div>
@@ -46,20 +46,19 @@
         </div>
 
         <!-- Container for weather conditions -->
-        <div class="container wx-conditions">
+        <div class="container content-right wx-conditions">
             <div class="row">
 
                 <!-- Card for current weather conditions in any region -->
                 <div class="card-deck current-wx">
                     <div class="card nowcast">
-                        <div class="card-title"><h3>City: </h3></div>
-                        <img src="" alt="">
+                        <div class="card-title" id="city"><h3>City: </h3></div>
                         <div class="card-body">
-                            <p class="temp-c">Temp: </p> <!-- Given temperature -->
-                            <p class="wind-c">Wind: </p> <!-- Wind speed-->
-                            <p class="humid-c">Humidity: </p> <!-- Humdity -->
-                            <p class="UV-c">UV-Index: </p> <!-- Severity of UV Index -->
-                            <p class="cond-c">Conditions: </p> <!-- Small summary of weather conditions -->
+                            <p id="temp-c">Temp: </p> <!-- Given temperature -->
+                            <p id="wind-c">Wind: </p> <!-- Wind speed-->
+                            <p id="humid-c">Humidity: </p> <!-- Humdity -->
+                            <p id="UV-c">UV-Index: </p> <!-- Severity of UV Index -->
+                            <p id="cond-c">Conditions: </p> <!-- Small summary of weather conditions -->
                         </div>
                     </div>
                 </div>
@@ -73,7 +72,6 @@
                     <!-- Day 1 weather conditions -->
                     <div class="card day-one-wx">
                         <div class="card-title"><h3>Day 1: </h3></div>
-                        <img src="" alt="">
                         <div class="card-body">
                             <p>Temp: </p> <!-- Given temperature -->
                             <p>Wind: </p> <!-- Wind speed-->
@@ -85,7 +83,6 @@
                     <!-- Day two weather conditions -->
                     <div class="card day-two-wx">
                         <div class="card-title"><h3>Day 2: </h3></div>
-                        <img src="" alt="">
                         <div class="card-body">
                             <p>Temp: </p> <!-- Given temperature -->
                             <p>Wind: </p> <!-- Wind speed-->
@@ -97,7 +94,6 @@
                     <!-- Day 3 weather conditions -->
                     <div class="card day-three-wx">
                         <div class="card-title"><h3>Day 3: </h3></div>
-                        <img src="" alt="">
                         <div class="card-body">
                             <p>Temp: </p> <!-- Given temperature -->
                             <p>Wind: </p> <!-- Wind speed-->
@@ -109,7 +105,6 @@
                     <!-- Day 4 weather conditions -->
                     <div class="card day-four-wx">
                         <div class="card-title"><h3>Day 4: </h3></div>
-                        <img src="" alt="">
                         <div class="card-body">
                             <p>Temp: </p> <!-- Given temperature -->
                             <p>Wind: </p> <!-- Wind speed-->
@@ -121,7 +116,6 @@
                     <!-- Day 5 weather conditions -->
                     <div class="card day-five-wx">
                         <div class="card-title"><h3>Day 5: </h3></div>
-                        <img src="" alt="">
                         <div class="card-body">
                             <p>Temp: </p> <!-- Given temperature -->
                             <p>Wind: </p> <!-- Wind speed-->
