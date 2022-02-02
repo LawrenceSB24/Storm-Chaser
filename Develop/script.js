@@ -16,7 +16,7 @@ var chosen = $("#selected-city");
 
 // variable for current weather data
 var nowcast = document.querySelector(".nowcast");
-var wxImg = document.createElement("img")
+
 
 var City = document.getElementById("city");
 var TempC = document.getElementById("temp-c");
@@ -26,33 +26,65 @@ var UVC = document.getElementById("UV-c");
 var CondC = document.getElementById("cond-c");
 
 // variable for future weather data
-var futureWx = document.querySelector(".future-wx");
+var FutureDay = document.getElementById("future");
+
+
+
+var Tempf = document.getElementById("future-temp");
+var Windf = document.getElementById("future-wind");
+var Humidf = document.getElementById("future-humid");
+var Condf = document.getElementById("future-cond");
 
 // Universal weather condition image icon
+var WxIcon = document.createElement('img');
 
 // fetch function for OpenWeather One Call
 
 function getApi() {
     city_name = chosen.val();
-    requestURL = "https://api.openweathermap.org/data/2.5/weather?q="+city_name+"&units=imperial&appid="+ApiKey;
+    requestURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city_name + "&units=imperial&appid=" + ApiKey;
     fetch(requestURL)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log("OpenWeather Current Forecast \n-----------")
-        console.log(data);
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log("OpenWeather Current Forecast \n-----------")
+            console.log(data);
 
-        wxImg.src = "https://api.openweather.org/img/wn/"+data.weather[0].icon+"@2px.png";
-        nowcast.append(wxImg);
-        
-        City.textContent = "City: " + data.name + " " + moment(Date(data.dt)).format("MMM DD, YYYY");
-        TempC.textContent = "Temp: " + data.main.temp + " F";
-        WindC.textContent = "Wind: " + data.wind.speed + " mph";
-        HumidC.textContent = "Humidity: " + data.main.humidity + "%";
-        CondC.textContent = "Conditions: " + data.weather[0].description;
-    })
+            var Timezone = data.timezone / 60 / 60;
+            var currentTime = moment.unix(data.dt).utc().utcOffset(Timezone)
+
+            City.textContent = "City: " + data.name + " " + moment(currentTime).format("MMM DD, YYYY");
+
+            TempC.textContent = "Temp: " + data.main.temp + " F";
+            WindC.textContent = "Wind: " + data.wind.speed + " mph";
+            HumidC.textContent = "Humidity: " + data.main.humidity + "%";
+            CondC.textContent = "Conditions: " + data.weather[0].description;
+
+
+            lat = data.coord.lat;
+            lon = data.coord.lon;
+
+            uviUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=hourly,minutely,alerts&units=imperial&appid=" + ApiKey;
+            fetch(uviUrl)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log("OpenWeather UV-index\n-----------");
+                    UVC.textContent = "UV-Index: " + data.current.uvi;
+                    console.log("OpenWeather 5-day Forecast\n-----------")
+                    console.log(data);
+
+                    for (var i = 0; i < data.length; i++) {
+                        FutureDay.textContent = daily[i].dt
+
+                    }
+                })
+                
+                         
+                  
+        })
+
 }
-
-
 fetchBtn.addEventListener('click', getApi);
