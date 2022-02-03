@@ -36,7 +36,7 @@ SO THAT I can plan a trip accordingly
 
 ## Notes
 
-> 1. Weather information for locations fetched from the OpenWeather One Call API site.[Link to OpenWeather One Call](https://openweathermap.org/api/one-call-api). Website contains documentation for setup and usage instruction.
+> 1. Weather information for locations fetched from the OpenWeather One Call API site. [Link to OpenWeather One Call](https://openweathermap.org/api/one-call-api). Website contains documentation for setup and usage instruction.
 
 > 2. Using local storage to store any persistent data.
 
@@ -45,4 +45,4 @@ SO THAT I can plan a trip accordingly
 ## Image of mock-up for functionality
 ![Mock-up of Weather dashboard presented in homework](./Assets/06-server-side-apis-homework-demo.png)
 
-### Link to website: 
+### Link to website: (https://lawrencesb24.github.io/Storm-Chaser/)
