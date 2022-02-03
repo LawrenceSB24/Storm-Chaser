@@ -45,4 +45,6 @@ SO THAT I can plan a trip accordingly
 ## Image of mock-up for functionality
 ![Mock-up of Weather dashboard presented in homework](./Assets/06-server-side-apis-homework-demo.png)
 
+The mock-up image here is a placeholder for tonight. I will work on the proper functionality of the true site tomorrow due to time constraints and lack of sleep.
+
 ### Link to website: (https://lawrencesb24.github.io/Storm-Chaser/)
