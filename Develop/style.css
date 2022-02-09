@@ -66,19 +66,16 @@ button {
 
 /* Formatting for the weather condition cards */
 .wx-conditions{
-    float: none;
+    /* float: none; */
     margin-left: 30%;
-}
-
-/* Formating for the current weather card */
-.current-wx {
-    width: 50%;
+    width: auto;
 }
 
 /* formating for the 5-day weather cards */
 .future-wx{
-    display: grid;
-    width: 100%;
+    display: table;
+    width: auto;
+    height: 100px;
 }
 
 /* Formating for the 5-day weather title */
@@ -87,7 +84,7 @@ button {
 }
 
 /* Styling and formating for the weather cards */
-.nowcast,
+#nowcast,
 .title,
 .day-one-wx,
 .day-two-wx,
@@ -104,10 +101,40 @@ button {
     color: oldlace;
     font-size: 18px;
     font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+    display: table-cell;
 }
 
 /* Prevents locations for having bullet points when saved */
 ul {
     list-style: none;
+}
+
+.uv_good {
+    width: 45%;
+    background-color: green;
+}
+
+.uv_meh {
+    width: 45%;
+    background-color: yellow;
+    color: black;
+}
+
+.uv_um {
+    width: 45%;
+    background-color: orange;
+    color: black;
+}
+
+.uv_welp {
+    width: 45%;
+    background-color: red;
+}
+
+.uv-uhoh {
+    width: 45%;
+    background-color: violet;
 }
 
