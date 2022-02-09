@@ -50,10 +50,11 @@
             <div class="row">
 
                 <!-- Card for current weather conditions in any region -->
-                <div class="card-deck current-wx">
-                    <div class="card nowcast">
+                <div class="card-deck cold-12 col-md-10 col-lg-5 current-wx">
+                    <div class="card" id="nowcast">
                         <div class="card-title" id="city"><h3>City: </h3></div>
                         <div class="card-body">
+                            <img id="weather-now-icon">
                             <p id="temp-c">Temp: </p> <!-- Given temperature -->
                             <p id="wind-c">Wind: </p> <!-- Wind speed-->
                             <p id="humid-c">Humidity: </p> <!-- Humdity -->
@@ -65,14 +66,15 @@
             </div>
 
             <!-- Card deck for weather conditions over the next 5 days in chosen location -->
-            <div class="card-deck future-wx">
+            <div class="card-deck d-inline-flex flex-wrap p-2">
                 <div class="title"><h2>5-Day Forecast</h2></div>
                 <div class="row">
 
                     <!-- Day 1 weather conditions -->
-                    <div class="card day-one-wx">
+                    <div class="card cold-12 col-md-10 col-lg-5 day-one-wx">
                         <div class="card-title" id="future-1"><h3></h3></div>
-                        <div class="card-body">
+                        <div class="card-body" id="daily-wx">
+                            <img id="weather-next-icon">
                             <p id="future-temp1">Temp: </p> <!-- Given temperature -->
                             <p id="future-wind1">Wind: </p> <!-- Wind speed-->
                             <p id="future-humid1">Humidity: </p> <!-- Humdity -->
@@ -81,9 +83,10 @@
                     </div>
     
                     <!-- Day two weather conditions -->
-                    <div class="card day-two-wx">
+                    <div class="card cold-12 col-md-10 col-lg-5 day-two-wx">
                         <div class="card-title" id="future-2"><h3></h3></div>
-                        <div class="card-body">
+                        <div class="card-body" id="daily-wx">
+                            <img id="weather-next-icon">
                             <p id="future-temp2">Temp: </p> <!-- Given temperature -->
                             <p id="future-wind2">Wind: </p> <!-- Wind speed-->
                             <p id="future-humid2">Humidity: </p> <!-- Humdity -->
@@ -92,9 +95,10 @@
                     </div>
     
                     <!-- Day 3 weather conditions -->
-                    <div class="card day-three-wx">
+                    <div class="card cold-12 col-md-10 col-lg-5 day-three-wx">
                         <div class="card-title" id="future-3"><h3></h3></div>
-                        <div class="card-body">
+                        <div class="card-body" id="daily-wx">
+                            <img id="weather-next-icon">
                             <p id="future-temp3">Temp: </p> <!-- Given temperature -->
                             <p id="future-wind3">Wind: </p> <!-- Wind speed-->
                             <p id="future-humid3">Humidity: </p> <!-- Humdity -->
@@ -103,9 +107,10 @@
                     </div>
     
                     <!-- Day 4 weather conditions -->
-                    <div class="card day-four-wx">
+                    <div class="card cold-12 col-md-10 col-lg-5 day-four-wx">
                         <div class="card-title" id="future-4"><h3></h3></div>
-                        <div class="card-body">
+                        <div class="card-body" id="daily-wx">
+                            <img id="weather-next-icon">
                             <p id="future-temp4">Temp: </p> <!-- Given temperature -->
                             <p id="future-wind4">Wind: </p> <!-- Wind speed-->
                             <p id="future-humid4">Humidity: </p> <!-- Humdity -->
@@ -114,9 +119,10 @@
                     </div>
     
                     <!-- Day 5 weather conditions -->
-                    <div class="card day-five-wx">
+                    <div class="card cold-12 col-md-10 col-lg-5 day-five-wx">
                         <div class="card-title" id="future-5"><h3></h3></div>
-                        <div class="card-body">
+                        <div class="card-body" id="daily-wx">
+                            <img id="weather-next-icon">
                             <p id="future-temp5">Temp: </p> <!-- Given temperature -->
                             <p id="future-wind5">Wind: </p> <!-- Wind speed-->
                             <p id="future-humid5">Humidity: </p> <!-- Humdity -->
